@@ -263,7 +263,7 @@
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\TransparentShadow.shader" />
     <None Include="Assets\GoogleARCore\Examples\AugmentedFaces\Materials\Shaders\AugmentedFaceOccluder.shader" />
     <None Include="Assets\GoogleARCore\Examples\Common\Materials\Shaders\PointCloud.shader" />
-    <None Include="Assets\Portal\Materials\Sponza.shader" />
+    <None Include="Assets\Portal\Materials\Sponza\Sponza.shader" />
     <None Include="Assets\Portal\Materials\PortalPlane.shader" />
     <None Include="Assets\Portal\Materials\Portal.shader" />
     <None Include="Assets\GoogleARCore\Examples\ComputerVision\Materials\EdgeDetectionBackground.shader" />

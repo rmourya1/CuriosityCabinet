@@ -19,14 +19,14 @@ public class PortalManager : MonoBehaviour
 
 void OnTriggerStay(Collider collider)
     {
-	mainCamera=GameObject.Find("First Person Camera");
+	//mainCamera=GameObject.Find("First Person Camera");
 
 	Vector3 camPositionInPortalSpace=transform.InverseTransformPoint(mainCamera.transform.position);
 
-        if (camPositionInPortalSpace.y<0.5f)
+        if (camPositionInPortalSpace.y < 0.5f)
         {
                //ignore stencil test
-		    for(int i =0;i<SponzaMaterials.Length;++i)
+		    for(int i=0 ; i<SponzaMaterials.Length; ++i)
                {
 		            SponzaMaterials[i].SetInt("_StencilComp",(int)CompareFunction.Always);
 		       }
@@ -34,7 +34,7 @@ void OnTriggerStay(Collider collider)
 		else
         {
                //Enable stencil test
-            for (int i =0;i<SponzaMaterials.Length;++i)
+            for (int i =0; i<SponzaMaterials.Length; ++i)
             {
 		        SponzaMaterials[i].SetInt("_StencilComp",(int)CompareFunction.Equal);
 		    }

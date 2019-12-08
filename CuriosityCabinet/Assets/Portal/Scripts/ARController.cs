@@ -42,12 +42,15 @@ using input=GoogleARCore.InstantPreviewInput;
         if (Frame.Raycast(t.position.x,t.position.y,TrackableHitFlags.PlaneWithinPolygon,out hit))
             {
 	        PortalDoor.SetActive(true);                             //set portal door active
-	        Anchor a=hit.Trackable.CreateAnchor(hit.Pose);          //create new anchor
+
+            Anchor a=hit.Trackable.CreateAnchor(hit.Pose);          //create new anchor
 	        PortalDoor.transform.position=hit.Pose.position;        //set position of portal
 	        PortalDoor.transform.rotation=hit.Pose.rotation;        //set rotation of portal
-	        Vector3 cameraPosition=ARCamera.transform.position;     //portal to face camera
+
+            Vector3 cameraPosition=ARCamera.transform.position;     //portal to face camera
 	        cameraPosition.y=hit.Pose.position.y;                   //lock rotation of portal to Y axis
-	        PortalDoor.transform.LookAt(cameraPosition,PortalDoor.transform.up);    //rotate portal to face camera  
+
+            PortalDoor.transform.LookAt(cameraPosition,PortalDoor.transform.up);    //rotate portal to face camera  
 	        PortalDoor.transform.parent=a.transform;                //attach portal to anchor
 	        }
     }
